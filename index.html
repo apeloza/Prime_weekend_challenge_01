@@ -11,26 +11,36 @@
     <body>
       <div class="container">
         <div class="formfield">
-            <form id="employeeinfo">
+            <form id="employeeinfo" class="form-horizontal">
               <div class="form-group">
-                <label for="employeefirstname">First Name:</label>
-                <input type="text" id="employeefirstname" name="employeefirstname" />
+                <label for="employeefirstname" class="col-sm-2 control-label">First Name:</label>
+                <div class="col-sm-4">
+                <input type="text" class="form-control" id="employeefirstname" name="employeefirstname" placeholder="Jane" />
+              </div>
               </div>
               <div class="form-group">
-                <label for="employeelastname">Last Name:</label>
-                <input type="text" id="employeelastname" name="employeelastname" />
+                <label for="employeelastname" class="col-sm-2 control-label">Last Name:</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="employeelastname" name="employeelastname" placeholder="Doe" />
+                </div>
               </div>
               <div class="form-group">
-                <label for="employeeID">ID#:</label>
-                <input type="text" id="employeeID" name="employeeID" />
+                <label for="employeeID" class="col-sm-2 control-label">ID#:</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="2430" />
+                </div>
               </div>
               <div class="form-group">
-                <label for="employeetitle">Job Title:</label>
-                <input type="text" id="employeetitle" name="employeetitle" />
+                <label for="employeetitle" class="col-sm-2 control-label">Job Title:</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="employeetitle" name="employeetitle" placeholder="Junior Developer" />
+                </div>
               </div>
               <div class="form-group">
-                <label for="employeesalary">Salary:</label>
-                <input type="number" id="employeesalary" name="employeesalary" />
+                <label for="employeesalary" class="col-sm-2 control-label">Salary:</label>
+                <div class="col-sm-4">
+                  <input type="number" class="form-control" id="employeesalary" name="employeesalary" placeholder="65000" />
+                </div>
               </div>
                 <input class="btn btn-default" type="submit" value="Submit Employee!" />
             </form>
