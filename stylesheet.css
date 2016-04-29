@@ -1,0 +1,13 @@
+.employeecontainer{
+  border-width: 1px;
+  border-style: solid;
+}
+.empCell{
+  border-width: 1px;
+  border-style: solid;
+}
+.delbtn{
+  border-width:1px;
+  border-style:solid;
+  background-color: #333;
+}
