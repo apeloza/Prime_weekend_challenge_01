@@ -17,18 +17,27 @@ $('.employeecontainer').on('click', '.delbtn', deleteEmployee);
 function addEmployee(empInfo){
   $('.employeecontainer').append('<tr class="empRow"></tr>');
   var $employeeCell = $('.employeecontainer').children().last();
-  $employeeCell.append('<td> ' + empInfo.employeefirstname + '</td><td> ' + empInfo.employeelastname + '</td><td> ' + empInfo.employeeID + '</td><td> ' + empInfo.employeetitle + '</td><td> ' + empInfo.employeesalary + '<td> <button class="delbtn btn btn-default">Delete!</button></td>');
+  $employeeCell.append('<td> ' + empInfo.employeefirstname + '</td><td> ' + empInfo.employeelastname + '</td><td> ' + empInfo.employeeID + '</td><td> ' + empInfo.employeetitle + '</td><td class= "individualSalary"> ' + empInfo.employeesalary + '<td> <button class="delbtn btn btn-default">Delete!</button></td>');
   $('#employeeinfo').find('input[type=text]').val('');
   $('#employeeinfo').find('input[type=number]').val('');
 }
 function addSalary(empInfo){
-  var employeeSalary = empInfo.employeesalary;
-totalSalary += Number(employeeSalary);
-$('.salary').remove();
-$('.salarycontainer').append('<p class="salary">Total Monthly Salary:' + totalSalary + '</p>');
+  var employeeSalary = Number(empInfo.employeesalary);
+totalSalary += employeeSalary;
+updateSalary();
 }
 
 function deleteEmployee(){
+  lowerSalary($(this).closest('.empRow').find('.individualSalary').text());
   $(this).closest('.empRow').remove();
+}
+function lowerSalary(empInfo){
+  var employeeSalary = Number(empInfo);
+  totalSalary -= employeeSalary;
+  updateSalary();
+}
+function updateSalary(){
+  $('.salary').remove();
+  $('.salarycontainer').append('<p class="salary">Total Monthly Salary:' + totalSalary + '</p>');
 }
 });
