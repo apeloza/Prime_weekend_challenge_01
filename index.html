@@ -1,31 +1,58 @@
 <!doctype html>
 <html>
-<head>
-  <title>Weekend Challenge 01</title>
-  <link rel="stylesheet" href="stylesheet.css" />
-  <script src="jquery-1.12.3.min.js"></script>
-  <script src="app.js"></script>
-  <body>
-    <div class="formfield">
-    <form id="employeeinfo">
-      <label for="employeefirstname">First Name:</label>
-      <input type="text" id="employeefirstname" name="employeefirstname"  />
-      <label for="employeelastname">Last Name:</label>
-      <input type="text" id="employeelastname" name="employeelastname" />
-      <label for="employeeID">ID#:</label>
-      <input type="text" id="employeeID" name="employeeID" />
-      <label for="employeetitle">Job Title:</label>
-      <input type="text" id="employeetitle" name="employeetitle" />
-      <label for="employeesalary">Salary:</label>
-      <input type="number" id="employeesalary" name="employeesalary" />
-      <input type="submit" value="Submit Employee!" />
-    </form>
-  </div>
-<div class="employeecontainer">
 
-</div>
-<div class="salarycontainer">
-</div>
-  </body>
+<head>
+    <title>Weekend Challenge 01</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="jquery-1.12.3.min.js"></script>
+    <script src="app.js"></script>
+
+    <body>
+      <div class="container">
+        <div class="formfield">
+            <form id="employeeinfo">
+              <div class="form-group">
+                <label for="employeefirstname">First Name:</label>
+                <input type="text" id="employeefirstname" name="employeefirstname" />
+              </div>
+              <div class="form-group">
+                <label for="employeelastname">Last Name:</label>
+                <input type="text" id="employeelastname" name="employeelastname" />
+              </div>
+              <div class="form-group">
+                <label for="employeeID">ID#:</label>
+                <input type="text" id="employeeID" name="employeeID" />
+              </div>
+              <div class="form-group">
+                <label for="employeetitle">Job Title:</label>
+                <input type="text" id="employeetitle" name="employeetitle" />
+              </div>
+              <div class="form-group">
+                <label for="employeesalary">Salary:</label>
+                <input type="number" id="employeesalary" name="employeesalary" />
+              </div>
+                <input class="btn btn-default" type="submit" value="Submit Employee!" />
+            </form>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID#</th>
+                    <th>Title</th>
+                    <th colspan="2">Salary</th>
+                </tr>
+            </thead>
+            <tbody class="employeecontainer">
+
+            </tbody>
+        </table>
+        <div class="salarycontainer">
+        </div>
+      </div>
+    </body>
 </head>
+
 </html>

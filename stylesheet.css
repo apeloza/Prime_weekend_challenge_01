@@ -9,5 +9,6 @@
 .delbtn{
   border-width:1px;
   border-style:solid;
-  background-color: #333;
+  background-color: indigo;
+  color:#fff;
 }
