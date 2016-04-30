@@ -39,8 +39,8 @@ function addEmployee(empInfo){
 //This functions adds an employee's salary to the total salary.
 function addSalary(empInfo){
 
-	//The employee's salary is converted to a number and then added to the total salary. Total salary is then updated.
-  var employeeSalary = Number(empInfo.employeesalary);
+	//The employee's salary is converted to a monthly number and then added to the total salary. Total salary is then updated.
+  var employeeSalary = Number(empInfo.employeesalary)/12;
 totalSalary += employeeSalary;
 updateSalary();
 }
@@ -57,7 +57,7 @@ function lowerSalary(empInfo){
 
 	//The salary that needs to be removed is fetched, and the $ sign in front is cut off with a substring, and then converted to a number. The salary is then updated.
   var employeeSalary = Number(empInfo.substring(1));
-  totalSalary -= employeeSalary;
+  totalSalary -= (employeeSalary/12);
   updateSalary();
 }
 //This function updates the total salary that is displayed on the screen. The actual calculations are handled in lowerSalary and addSalary.
