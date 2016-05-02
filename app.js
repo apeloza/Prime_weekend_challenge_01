@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
-//Combined monthly salary is initialized as a global variable
+//Combined monthly salary and a storage array are initialized as a global variable
 var totalSalary= 0;
+var array = [];
 
 //jQuery waits for the user to submit employee information. When they do, it produces a new Object of that employee.
 $('#employeeinfo').on('submit', function(event) {
@@ -11,7 +12,8 @@ $('#employeeinfo').on('submit', function(event) {
     employee[field.name] = field.value;
 });
 
-//Two functions are called. The first adds an employee to the list of employees, and the second function adds their salary to the monthly salary.
+//Two functions are called. The first adds an employee to the list of employees, and the second function adds their salary to the monthly salary. The array is used to store the objects just in case.
+array.push(employee);
 addEmployee(employee);
 addSalary(employee);
 });
